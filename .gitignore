@@ -1,0 +1,60 @@
+# .gitignore for Python Telegram Bot
+
+# Virtual Environment
+venv/
+.env/
+.envrc
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+*.so
+.Python
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.production
+
+# IDE & Editors
+.vscode/
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Logs and Databases
+*.log
+*.sqlite
+*.db
+
+# Local Development
+local_settings.py
+instance/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Backup Files
+*.bak
