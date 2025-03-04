@@ -1,5 +1,6 @@
 from telegram.ext import ApplicationBuilder
 from dotenv import load_dotenv
+from src.handlers import register_handlers
 import os
 
 
@@ -18,6 +19,7 @@ def main():
        
     app = builder.token(os.getenv('BOT_TOKEN')).build()
 
+    register_handlers(app)
     app.run_polling()
 
 
