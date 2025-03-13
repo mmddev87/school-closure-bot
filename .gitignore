@@ -1,60 +1,26 @@
-# .gitignore for Python Telegram Bot
+# Ignore dependencies installed by Composer
+/vendor/
 
-# Virtual Environment
-venv/
-.env/
-.envrc
-
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-*.egg
-dist/
-build/
-*.so
-.Python
-
-# Environment Variables
+# Ignore environment-specific files
 .env
-.env.local
-.env.development
-.env.production
 
-# IDE & Editors
-.vscode/
+# Ignore Composer files (except composer.json and composer.lock)
+/composer.phar
+/composer.lock
+
+# Ignore IDE-specific files
 .idea/
-*.iml
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+.vscode/
 *.swp
 *.swo
 
-# Logs and Databases
-*.log
-*.sqlite
-*.db
 
-# Local Development
-local_settings.py
-instance/
-
-# Testing
-.coverage
-htmlcov/
-.pytest_cache/
-
-# Jupyter Notebooks
-.ipynb_checkpoints/
-
-# macOS
+# Ignore system files
 .DS_Store
-
-# Windows
 Thumbs.db
-Desktop.ini
 
-# Backup Files
-*.bak
+# Ignore any custom storage or upload directories
+/storage/
+
+# Ignore PHPUnit cache
+.phpunit.result.cache
