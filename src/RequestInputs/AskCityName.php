@@ -52,7 +52,7 @@ class AskCityName extends RequestInputHandler
         }
 
         return $this->sendMessage([
-            'text' => ($closed) ? "شهر $cityInput فردا تعطیل است." : "شهر $cityInput فردا تعطیل نیست."
+            'text' => "شهر $cityInput فردا تعطیل " . (($closed) ? "است" : "نیست")
         ]);
     }
 
