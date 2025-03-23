@@ -4,7 +4,8 @@
         "westacks/telebot": "^3.4",
         "lucianotonet/groq-php": "^0.1.2",
         "guzzlehttp/guzzle": "^7.9",
-        "morilog/jalali": "3.*"
+        "morilog/jalali": "3.*",
+        "pimple/pimple": "^3.0"
     },
     "autoload": {
         "psr-4": {
