@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands;
+namespace Presentation\Telebot\Commands;
 
 use WeStacks\TeleBot\Handlers\CommandHandler;
 

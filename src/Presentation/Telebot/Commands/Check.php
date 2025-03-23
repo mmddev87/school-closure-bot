@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Commands;
+namespace Presentation\Telebot\Commands;
 
-use App\RequestInputs\AskCityName;
+use Presentation\TeleBot\RequestInputs\AskCityName;
 use WeStacks\TeleBot\Handlers\CommandHandler;
 
 class Check extends CommandHandler
@@ -18,6 +18,4 @@ class Check extends CommandHandler
             'text' => 'لطفا نام شهر مورد نظر را وارد کنید.'
         ]);
     }
-
-
 }
