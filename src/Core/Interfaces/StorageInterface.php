@@ -7,5 +7,4 @@ use DateTime;
 interface StorageInterface {
     function get(string $key): mixed;
     function set(string $key, mixed $value): void;
-    function deletePreviousData(DateTime $upTo): void;
 }
