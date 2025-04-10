@@ -1,6 +1,7 @@
 <?php
 
 use Bootstrap\TelebotBootstrapper;
+use GuzzleHttp\Exception\ConnectException;
 use Psr\Container\ContainerInterface;
 
 require_once 'vendor/autoload.php';
@@ -8,7 +9,15 @@ require_once 'vendor/autoload.php';
 define('BASE_PATH', __DIR__);
 Dotenv\Dotenv::createUnsafeImmutable(BASE_PATH)->safeLoad();
 
-(new TelebotBootstrapper)->resetLocalCommands()->runPolling();
+$telebotBootstrapper = (new TelebotBootstrapper)->resetLocalCommands();
+
+while (true) {
+    try {
+        $telebotBootstrapper->runPolling();
+    } catch (ConnectException $ex) {
+        echo 'Connect error. Trying again ...';
+    }
+}
 
 
 
