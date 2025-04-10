@@ -2,9 +2,9 @@
 
 namespace Bootstrap;
 
+use Infrastructure\Services\TelebotJsonStorage;
 use Presentation\Telebot\{
     Commands\Check,
-    Commands\SetReminder,
     Commands\Start,
     RequestInputs\AskCityName
 };
@@ -23,11 +23,10 @@ class TelebotBootstrapper
                 : 'https://api.telegram.org/bot{TOKEN}/{METHOD}'),
             'exceptions' => true,
             'async'      => false,
-            // 'storage' => JsonStorage::class,
+            'storage' => TelebotJsonStorage::class,
             'handlers'   => [
                 Start::class,
                 Check::class,
-                SetReminder::class,
     
                 AskCityName::class
             ]
