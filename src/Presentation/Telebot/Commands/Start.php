@@ -11,6 +11,11 @@ class Start extends CommandHandler
 
     public function handle()
     {
-        echo 'start';
+        $this->sendMessage([
+            "text" => <<<EOL
+                به ربات تعطیلی مدارس خوش آمدید.
+                برای استفاده از ربات از دستور /check استفاده کنید.
+                EOL
+        ]);
     }
 }
