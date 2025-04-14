@@ -21,12 +21,12 @@ async function checkHoliday() {
 
     const data = await response.json();
 
-    resultDiv.className = data.result ? "holiday" : "not-holiday";
+    resultDiv.className = data.result ? "closed" : "not-closed";
     resultDiv.innerHTML = data.result
       ? `شهر ${city} امروز تعطیل است`
       : `شهر ${city} امروز تعطیل نیست`;
   } catch (error) {
-    resultDiv.className = "holiday";
+    resultDiv.className = "closed";
     resultDiv.innerHTML = "خطا در دریافت اطلاعات";
     throw error;
   }

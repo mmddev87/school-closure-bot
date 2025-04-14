@@ -59,6 +59,7 @@ input:focus {
 }
 
 button {
+  width: 30%;
   background: #d48388;
   color: white;
   border: none;
@@ -74,6 +75,16 @@ button:hover {
   background: #d39397;
 }
 
+@media screen and (max-width: 500px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  input, button {
+    width: 100%;
+  }
+}
+
 #result {
   margin-top: 1.5rem;
   padding: 1rem;
@@ -82,12 +93,12 @@ button:hover {
   display: none;
 }
 
-.holiday {
+.closed {
   background: #ff6b6b;
   color: white;
 }
 
-.not-holiday {
+.not-closed {
   background: #6bff6b;
   color: #2c3e50;
 }
